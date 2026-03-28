@@ -13,10 +13,6 @@ A beautiful React web app that renders animated fractals in a terminal-like inte
 - **Responsive Design**: Adapts to different screen sizes
 - **Performance Optimized**: Uses `requestAnimationFrame` for smooth animations
 
-## Screenshots
-
-![Fractal Terminal Screenshot](./public/fractal-terminal-screenshot.png)
-
 ## Getting Started
 
 ### Prerequisites
