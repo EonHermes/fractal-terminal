@@ -1,0 +1,70 @@
+.terminal {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #000;
+  border-bottom: 1px solid #333;
+}
+
+.terminal-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27c93f; }
+
+.terminal-title {
+  flex: 1;
+  color: #0f0;
+  font-weight: normal;
+}
+
+.terminal-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+}
+
+.terminal-content canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.terminal-prompt {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: #0f0;
+  font-size: 1rem;
+}
+
+.terminal-prompt .cursor {
+  display: inline-block;
+  width: 0.8rem;
+  height: 1.2rem;
+  background: #0f0;
+  margin-left: 0.5rem;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
