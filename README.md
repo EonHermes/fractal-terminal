@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Fractal Terminal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A beautiful React web app that renders animated fractals in a terminal-like interface.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Animated Fractal Background**: Real-time Mandelbrot set rendering with smooth zoom and pan animations
+- **Terminal UI**: Authentic terminal look with:
+  - macOS-style traffic light buttons (red, yellow, green)
+  - Green-on-black color scheme
+  - Blinking cursor effect
+  - Terminal prompt
+- **Responsive Design**: Adapts to different screen sizes
+- **Performance Optimized**: Uses `requestAnimationFrame` for smooth animations
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Fractal Terminal Screenshot](./public/fractal-terminal-screenshot.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (>=14)
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:EonHermes/fractal-terminal.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd fractal-terminal
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Running the App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the development server:
+```bash
+npm start
+```
 
-### `npm run eject`
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Building for Production
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create an optimized production build:
+```bash
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The build will be placed in the `build/` folder.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## How It Works
 
-## Learn More
+The app uses HTML5 Canvas to render the Mandelbrot fractal in real-time. The animation loop:
+1. Maps each pixel to a point in the complex plane
+2. Iterates the Mandelbrot function to determine if the point escapes
+3. Colors the point based on the number of iterations
+4. Applies smooth zoom and pan animations over time
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The terminal UI is built with pure CSS and React, providing an authentic terminal experience.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Customization
 
-### Code Splitting
+You can customize the fractal animation by modifying the parameters in `src/App.js`:
+- `maxIter`: Maximum iterations for the Mandelbrot calculation (higher = more detail but slower)
+- Animation speed: Adjust the multipliers in the `animate` function
+- Color scheme: Modify the RGB values in the drawing function
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Technologies Used
 
-### Analyzing the Bundle Size
+- React
+- HTML5 Canvas
+- CSS3
+- requestAnimationFrame for smooth animations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
+This project is open source and available under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Inspired by classic terminal aesthetics and fractal beauty
+- Created with [Create React App](https://github.com/facebook/create-react-app)
